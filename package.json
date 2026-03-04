@@ -1,0 +1,19 @@
+{
+  "name": "library-ms",
+  "version": "1.0.0",
+  "description": "A Full-Stack Library Management System with JWT Authentication and Role-Based Access Control.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Payal-Hamand/Library-MS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Payal-Hamand/Library-MS/issues"
+  },
+  "homepage": "https://github.com/Payal-Hamand/Library-MS#readme"
+}
