@@ -3,7 +3,6 @@ import { useState, useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import API from "../api/axios";
-import LeftPanel from "../components/LeftPanel";
 import PasswordInput from "../components/PasswordInput";
 import Alert from "../components/Alert";
 import { BookIcon, UserIcon, ArrowIcon, SpinnerIcon } from "../components/Icons";
@@ -33,13 +32,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen bg-slate-950 flex">
-      <LeftPanel
-        headline={`Every book<br/>has a story<br/><span class="text-teal-400">to tell.</span>`}
-        subheadline="A modern platform to manage your entire library — track books, borrowers, and availability all in one place."
-        features={[
-       
-        ]}
-      />
+    
 
       <div className="flex-1 flex items-center justify-center p-8">
         <div className="w-full max-w-md">

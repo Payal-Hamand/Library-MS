@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import API from "../api/axios";
-import LeftPanel from "../components/LeftPanel";
 import PasswordInput from "../components/PasswordInput";
 import Alert from "../components/Alert";
 import { BookIcon, UserIcon, MailIcon, KeyIcon, ArrowIcon, SpinnerIcon } from "../components/Icons";
@@ -68,13 +67,7 @@ const Register = () => {
 
   return (
     <div className="min-h-screen bg-slate-950 flex">
-      <LeftPanel
-        headline={`Start your<br/>reading<br/><span class="text-teal-400">journey.</span>`}
-        subheadline="Create your account and get instant access to thousands of books. Borrow, track, and manage your reading list effortlessly."
-        features={[
-        
-        ]}
-      />
+      
 
       <div className="flex-1 flex items-center justify-center p-8 overflow-y-auto">
         <div className="w-full max-w-md py-4">
