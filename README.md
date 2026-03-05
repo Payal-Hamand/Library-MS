@@ -1,108 +1,170 @@
 # Library-Management-System
 
-A Full-Stack Library Management System with JWT Authentication and Role-Based Access Control.
+The system allows users to manage books in a library with authentication, role-based access control, and full CRUD operations.
+
+-  Features
+Authentication
+User Registration
+User Login
+JWT-based authentication
+Secure password hashing using bcrypt
+Role Based Access Control
+- Admin
+Add books
+Edit books
+Delete books
+Update book status
+
+-User
+
+View books
+Borrow books
+Return books
+Book Management
+Add Book
+View Books
+Update Book Details
+Delete Book
+Borrow / Return Books
+Book status tracking (available / borrowed)
+
+- Testing
+
+API testing implemented using Jest + Supertest
+
+Each API route has at least one test case
 
 - Tech Stack
-
 Backend
-
 Node.js
-
 Express.js
-
 MongoDB
-
-JWT Authentication
-
-bcrypt (password hashing)
+Mongoose
+JWT (jsonwebtoken)
+bcryptjs
+Jest
+Supertest
 
 Frontend
 
-React (TypeScript)
-
+React
+TypeScript
 TailwindCSS
-
 Axios
-
 React Router
 
-- Features
 
-User Login & Logout
+- Installation & Setup
+1️⃣ Clone the Repository
+git clone https://github.com/Payal-Hamand/Library-MS.git
+cd Library-MS
+- Backend Setup
 
-JWT-based authentication
+Navigate to backend folder:
 
-Role-based access control (Admin / User)
-
-Book CRUD operations
-
-Borrow / Return functionality
-
-Protected routes
-
-- Setup Instructions
-1️⃣ Clone Project
-git clone (https://github.com/Payal-Hamand/Library-Management-System.git)
-2️⃣ Backend Setup
 cd Backend
+
+Install dependencies:
+
 npm install
 
-Create .env file inside Backend folder:
+Create .env file:
 
 PORT=5000
-MONGO_URI=mongodb://localhost:27017/libraryDB
-JWT_SECRET=yourSecretKey
+MONGO_URI=mongodb://localhost:27017/library
+JWT_SECRET=your_secret_key
 
-Start backend:
+Run backend server:
 
 npm run dev
 
-Backend runs on:
+or
 
-http://localhost:5000
-3️⃣ Frontend Setup
-cd frontend
-npm install
 npm start
 
-Frontend runs on:
+Backend will run on:
+
+http://localhost:5000
+
+- Frontend Setup
+
+Open another terminal:
+
+cd frontend
+
+Install dependencies:
+
+npm install
+
+Start React app:
+
+npm start
+
+Frontend will run on:
 
 http://localhost:3000
 
-*** Admin Credentials
+- Admin Credentials
 
 Use these credentials to login as Admin:
 
 Username: admin
 Password: admin123
 
-(Admin can add, delete, and manage books)
+Admin can:
 
--  API Endpoints
-Auth
+Add books
 
-POST /auth/register
+Edit books
 
-POST /auth/login
+Delete books
 
-Books
+Manage book status
 
-GET /books (Authenticated)
+- Running Tests
 
-POST /books (Admin only)
+Backend API tests are implemented using Jest and Supertest.
 
-PUT /books/:id (Admin only)
+Run tests from the Backend folder:
 
-DELETE /books/:id (Admin only)
+cd Backend
+npm test
 
-PATCH /books/:id/status
+Expected output:
+
+PASS src/tests/auth.test.js
+PASS src/tests/books.test.js
+
+Test Suites: 2 passed
+Tests: 7 passed
+
+The tests cover:
+
+User registration
+
+User login
+
+Get books
+
+Add book
+
+Update book
+
+Update book status
+
+Delete book
 
 - Security
 
-Passwords hashed using bcrypt
+The application implements several security measures:
 
-JWT with 1 hour expiration
+Password hashing using bcrypt
 
-Protected backend routes
+JWT authentication
 
-Role-based authorization middleware
+Protected API routes
+
+Role-based authorization
+
+Input validation and error handling
+
